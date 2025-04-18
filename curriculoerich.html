@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <style>
+        /* Reset de margin e padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9ecef;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Menu de Navegação */
+        nav {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffc107;
+        }
+
+        /* Layout de Seções */
+        main {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 40px;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        section h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Lista de Projetos */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        /* Estilo do formulário */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        label {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            margin-bottom: 15px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsividade */
+        @media (min-width: 768px) {
+            main {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            main {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu de Navegação -->
+    <nav>
+        <a href="#apresentacao">Apresentação</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <main>
+        <!-- Seção de Apresentação Pessoal -->
+        <section id="apresentacao">
+            <h2>Apresentação Pessoal</h2>
+            <p>Olá, sou Gustavo Henrique Erich, estudante de Engenharia de Software e trabalho na NG Locações. Tenho conhecimentos básicos em Excel, intermediários em Python e C, além de inglês básico. Estou constantemente buscando aprimorar minhas habilidades e me aprofundar nas tecnologias mais recentes.</p>
+        </section>
+
+        <!-- Seção de Portfólio -->
+        <section id="portfolio">
+            <h2>Portfólio</h2>
+            <p>Aqui estão alguns dos projetos que desenvolvi ou estou trabalhando:</p>
+            <ul>
+                <li><strong>Projeto 1:</strong> Simulação de Interface de Site - Desenvolvido com Figma.</li>
+                <li><strong>Projeto 2:</strong> Sistema de Controle de Estoque - Criado com Python e Flask.</li>
+                <li><strong>Projeto 3:</strong> Site Pessoal - Desenvolvido com HTML, CSS e JavaScript.</li>
+            </ul>
+            <p>Mais detalhes sobre esses projetos estarão disponíveis em breve.</p>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato">
+            <h2>Formulário de Contato</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
